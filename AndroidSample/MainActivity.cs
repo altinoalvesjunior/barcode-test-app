@@ -12,15 +12,13 @@ namespace XamarinScanditSDKSampleAndroid
         {
             base.OnCreate (bundle);
 
-            // Set our view from the "main" layout resource
             SetContentView (Resource.Layout.Main);
 
-            // Get our button from the layout resource,
-            // and attach an event to it
+            // obter botão de acordo o layout
             Button button = FindViewById<Button> (Resource.Id.myButton);
             
             button.Click += delegate {
-                // start the scanner
+                // iniciar para escanear
                 StartActivity(typeof(ScanActivity));
             };
         }
